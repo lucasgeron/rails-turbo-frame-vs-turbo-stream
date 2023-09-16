@@ -1,0 +1,38 @@
+<div>
+  <h1 class="font-bold text-4xl">Site#index</h1>
+  <p>Find me in app/views/site/index.html.erb</p>
+</div>
+
+<div>
+  <%= link_to 'Load First Page (HTML)', site_first_page_path, class:'btn-primary'%>
+</div>
+
+<div>
+  <%= link_to 'Load First Page (TURBO FRAME)', site_first_page_path, class:'btn-primary', data: {turbo_frame:'frame'}%>
+</div>
+
+<div>
+  <%= turbo_frame_tag 'frame' %>
+</div>
+
+<div>
+  <%= link_to 'Load First Page (TURBO STREAM)', site_first_page_path, class:'btn-primary', data: {turbo_stream: true}%>
+</div>
+
+<div id="my_stream">
+  <p>Sample content for stream example</p>
+</div>
+
+<div id="other_stream">
+  <p>Other content:</p>
+</div>
+
+<div id="remove_me">
+  <p>Remove me</p>
+</div>
+
+<div>
+  <%= link_to 'Load Stream Page (TURBO STREAM VIA WEBSOCKET)', site_stream_page_path, class:'btn-primary', data: {turbo_stream: true}%>
+</div>
+
+<%= turbo_stream_from "my_stream_from" %>

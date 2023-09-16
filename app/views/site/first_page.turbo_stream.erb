@@ -1,0 +1,11 @@
+<%= turbo_stream.update "my_stream" do %>
+  <p> replaced by turbo stream</p>
+<%end%>
+
+<%= turbo_stream.remove "remove_me" %>
+
+<%= turbo_stream.append "other_stream" do %>
+  <% 3.times do |i| %>
+    <p> something else <%= i+1 %>  </p>
+  <%end%>
+<% end %>

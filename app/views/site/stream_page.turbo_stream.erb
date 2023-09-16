@@ -1,0 +1,5 @@
+<%= turbo_stream.append "other_stream" do %>
+  <% 3.times do |i| %>
+    <p> something else added by stream_page <%= i+1 %>  </p>
+  <%end%>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="space-y-4">
+  <div class="border">
+    <p class="bg-red-600 text-white">This will be render only if was an HTML response</p>
+    <h1 class="font-bold text-4xl">Site#first_page</h1>
+    <p>Find me in app/views/site/first.html.erb</p>
+  </div>
+
+  <div class="">
+    <%= turbo_frame_tag "frame" do %>
+      <div class='border'>
+        <p class="bg-blue-600 text-white">This will be render with HTML/TURBO_FRAME response</p>
+        <h1 class="font-bold text-4xl">Site#first_page TURBO_FRAME</h1>
+        <p>Find me in app/views/site/first.html.erb</p>
+      <% end %>
+    </div>
+  </div>
+</div>
